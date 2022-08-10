@@ -38,7 +38,7 @@ main{
   line-height: 1.2;
 }
 /* Body Responsive*/
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   body {
     width: 100%;
   }
@@ -46,7 +46,7 @@ main{
     font-size: 10pt
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 800px) {
   body {
     width: 100%;
   }
