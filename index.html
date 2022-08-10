@@ -1,0 +1,192 @@
+<!--
+ * WEB222  -  Final Assessment
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:        Yick Shu Yuen
+ *      Student ID:  153841218
+ *      Date:        10 Aug, 2022
+ */-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Yick Shu Yuen" />
+    <title>Yick Shu Yuen Personal Website </title>
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <!--The cover section of the site with photo and two buttons-->
+      <div id="cover">
+        <img src="./image/propic.png" alt="Yick Photo"  class="center" />
+        <h1>Yick Shu Yuen</h1>
+        <h4>Web Developer</h4>
+        <a href = "./doc/Yuen_Resume.pdf" download><button id="btn1" class="coverbtn" type="button">Resume</button></a>
+        <a href= "#contactform" class="coverbtn"><button id="btn2">Contact Me</button></a>
+      </div>
+      <br>
+      <br>
+      <!--The About Me Section in two columns-->
+      <div id="aboutme">
+        <div class="row">
+          <div class="column">
+            <h4 id="test">About Me and Honesty Statement</h4>
+            <p>  Hi, I am Yick Shu Yuen! I am from Hong Kong and now studying computer programming in Seneca College in Toronto, Canada.
+              I am working on my way to become a proper web developer, and this is a website about me.<br><br>
+              <q>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. 
+              No part of this assessment has been copied manually or electronically from any other source (including web sites)
+               except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. 
+               I also declare that no part of this assignment has been distributed to other students.</q></p>
+               <p><strong>Date:</strong> Aug 10, 2022</p>
+          </div>
+          <div class="column">
+            <h4>Basic Information</h4>
+            <table id="basicinfo">
+              <tbody>
+               <tr>
+                  <th>NAME: </th>
+                  <td>Yick Shu Yuen</td>
+                </tr>
+                <tr>
+                  <th>EMAIL: </th>
+                  <td>yyuen3@myseneca.ca</td>
+                </tr>
+                <tr>
+                  <th>STUDENT ID: </th>
+                  <td>153841218</td>
+                </tr>
+                <tr>
+                  <th>COURSE: </th>
+                  <td>WEB222 - Web Programming Principles</td>
+                </tr>
+                <tr>
+                  <th>CLASS SECTION: </th>
+                  <td>ZAA</td>
+                </tr>
+                <tr>
+                  <th>INSTRUCTOR: </th>
+                  <td>Dr. Muath Alzghool</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--The Education Section in two columns-->
+      <div id="education">
+        <div class="container">
+          <h3>Education</h3>
+          <div class = "card">
+            <div class ="leftcard">
+              <p><br>Jan 2022 - Apr 2023(expected)</p>
+              <h5>Diploma in Computer Programing</h5>
+            </div>
+            <div class ="rightcard">
+            <p class="degree">Ontario College Diploma</p>
+            <a href="https://www.senecacollege.ca/programs/fulltime/CPP.html" target="_blank">           
+              <p class ="program">Computer Programming</p></a>
+            <p class="school">Seneca College of Applied Arts and Technology</p>
+            <p class="award">Award: President's Honour List</p>
+            </div>
+          </div>
+          <div class="card">
+          <div class ="leftcard">
+            <p><br>Sep 2014 - Aug 2016</p>
+            <h5>Bachelor Degree in Communication</h5>
+          </div>
+          <div class ="rightcard">
+            <p class="degree">Bachelor of Arts (Hons)</p>
+            <a href="https://www.cityu.edu.hk/com/" target="_blank">     
+            <p class ="program">Media and Communication</p></a>
+            <p class="school">City University of Hong Kong</p>
+            <p class="award">CGPA: 3.25</p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!--The Form Section in a table format-->
+      <div id="contactform">
+        <h3>Contact Me</h3>
+        <form id="contact-form" name="form1" method="post" action="https://httpbin.org/post" onsubmit="return formValidation();">
+         <table class="tableform">
+            <tbody>
+              <tr>
+                <th><label for="inputname">Name:</label></th>
+                <td><input type="text" id="inputname" name="input" placeholder="Your Name" required="required" minlength="2"> </td>
+              </tr>
+              <tr>
+                <th><label for="inputemail">Email:</label></th>
+                <td><input type="email" id="inputemail" name="input" placeholder="Your Email" required="required"></td>
+              </tr>
+              <tr>
+                <th><label for="inputaddress">Address:</label></th>
+                <td><textarea id="inputaddress" name="input" cols="40" rows="3" placeholder="Your Address" required="required" minlength="10"></textarea></td>
+              </tr>
+              <tr>
+                <th><label for="inputcity">City: </label></th>
+                <td><input type="text" id="inputcity" name="input" list="suggestions" placeholder="Your City" required="required">
+                  <datalist id="suggestions">
+                    <option value="Calgary"></option>
+                    <option value="Edmonton"></option>
+                    <option value="Iqualuit"></option>
+                    <option value="Ottawa"></option>
+                    <option value="Montreal"></option>
+                    <option value="St. John"></option>
+                    <option value="St. John's"></option>
+                    <option value="Toronto"></option>
+                    <option value="Vancouver"></option>
+                    <option value="Whitehorse"></option>
+                    <option value="Winnipeg"></option>
+                    <option value="Yellowknife"></option>
+                  </datalist>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="postalcode">Postal Code:</label></th>
+                <td> <input type="text" id="postalcode" pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" placeholder="A1A 1A1" required="required"></td>
+              </tr>
+              <tr>
+                <th><label for="question">What this is about? </label></th>
+                <td>
+                  <input type="radio" id="question" name="about" value="question" checked>Question<br>
+                  <input type="radio" id="comment" name="about" value="comment">Comment<br>
+                  <input type="radio" id="hiring" name="about" value="hiring">Hiring
+                  <ul id = rate>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="inputmessage">Messege:</label></th>
+                <td><textarea id="inputmessage" name="input" cols="40" rows="6" placeholder="Your Message" required="required"></textarea></td>
+              </tr>
+              <tr>
+                <th><label for="inputdate">Date:</label></th>
+                <td><input type="date" id="inputdate" name="contact-date" min="2022-01-01" max="2025-12-31" required="required"></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <!-- Form buttons -->
+          <div class="form-btn">
+            <input type="submit" name="submit" class="form-btn" value="Submit Information">
+            <input type="reset" name="reset" class="form-btn" value="Clear">
+          </div>
+        </form>
+       </div>
+    </main>
+    <footer>
+      <p>all right reserved</p>
+      <p>2022 <a href="https://www.linkedin.com/in/rae-yick-shu-yuen-00a6b9b5/" target="_blank">Yick Shu Yuen</a></p>
+    </footer>
+      <!-- JavaScript File -->
+      <script src="./js/script.js" ></script>
+  </body>
+</html>

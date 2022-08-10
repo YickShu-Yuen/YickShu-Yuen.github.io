@@ -1,0 +1,305 @@
+/*
+ * WEB222  -  Final Assessment
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:        Yick Shu Yuen
+ *      Student ID:  153841218
+ *      Date:        10 Aug, 2022
+ */
+
+/* Body */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+  margin: 0 auto;
+}
+main{
+  /* be centered in the viewport*/
+  margin: 0 auto;
+  /* 95% of the viewport width*/ 
+  width: 95%;
+  /* content width should be limited to 1,024 pixels*/
+  max-width: 1024px;
+  color: #000000;
+  background-color: #94B49F;
+  line-height: 1.2;
+}
+/* Body Responsive*/
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+  p {
+    font-size: 10pt
+  }
+}
+@media (max-width: 400px) {
+  body {
+    width: 100%;
+  }
+}
+/* Column */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px 0px 0px 65px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Column Responsive*/
+@media (max-width: 800px) {
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0px 10px;
+  }
+}
+/* Sections */
+img {
+  padding: 30px 0px 0px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cover {
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+#aboutme {
+  /*background-color: #E4CDA7;*/
+  background-color: white;
+  color: #000000;
+  text-align: left;
+  padding: 0px 50px;
+  border: 2px solid;
+  border-color: #CFB784;
+}
+
+#education {
+  background-color: #CFB784;
+  color: #000000;
+  text-align: center;
+}
+#contactform {
+  color: #000000;
+  text-align: center;
+}
+
+/* Tables */
+table {
+  text-align: left;
+  width: 100%;
+}
+
+#contactform table {
+  width: 100%;
+  border: 2px solid black;
+}
+
+th,td{
+  padding: 0.2em;
+  border-bottom: 2x solid;
+  text-align: left;
+}
+
+/* Table Responsive */
+@media (max-width: 800px) {
+  table {
+    text-align: center;
+    width: 100%;
+  }
+  td, th {
+    padding: 0 em;
+    border-bottom: 2x solid;
+    font-size: 12px ;
+  }
+}
+/* Link */
+a,a:visited ,a:active {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover{
+  text-decoration: none;
+}
+footer a,footer a:visited ,footer a:active {
+  text-decoration: none;
+  color: #3a7563;
+}
+.rightcard a:hover{
+  color: #3a7563;
+}
+
+/* List */
+ul {
+  list-style-type: square;
+  margin-top: -2px;
+}
+
+/* Forms and input */
+form{
+  margin: 0 auto; 
+  width: 70%;
+}
+textarea {
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+textarea, input {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color:white;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Button */
+button{
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: white;
+  color: #000000;
+  border: 5px solid #3a7563;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 40px;
+}
+ input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: white;
+  color: #000000;
+  border: 3px solid black;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.button:focus:enabled,
+.button:hover:enabled,
+button:focus:enabled,
+button:hover:enabled,
+input[type="submit"]:hover:enabled,
+input[type="reset"]:focus:enabled,
+input[type="reset"]:hover:enabled{
+  background-color: #CFB784;
+  border-color: #CFB784;
+  color: black;
+}
+
+/* Card */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  width: 100%;
+  padding: 0px 120px 30px;
+  text-decoration: none;
+}
+.leftcard {
+  padding-inline: 10px 10px;
+  width: 30%;
+  display:table-cell;
+  flex-direction: row;
+  background-color: #3a7563;  
+}
+.rightcard {
+  padding-inline: 20px;
+  width: 100%;
+  display:table-cell;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  text-align: left ;
+  line-height: 0.8em;
+  border: 2px solid #3a7563;
+}
+
+/* Card Font */
+.degree {
+  font-size: 1.4rem;
+}
+.program {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.school {
+  font-size: 0.8rem;
+  color: grey;
+}
+.award {
+  font-size: 0.8rem;
+  color: grey;
+}
+/* Card Responsive */
+@media (max-width: 1000px) {
+  .card {
+    padding: 10px 10x;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .right-card,
+  .left-card {
+    width: 100%;
+    padding-block: 1rem;
+    align-items: center;
+  }
+  .degree {
+    font-size: 1rem;
+  }
+  .program {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+/* Footer */
+footer {  
+  text-transform: uppercase;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 95%;
+  color: black;
+  background-color: white;
+  line-height: 0.8;
+  font-size: 8pt;
+  text-align: right;
+}
+
