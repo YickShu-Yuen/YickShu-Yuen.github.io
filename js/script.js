@@ -6,7 +6,6 @@
  * copied manually or electronically from any other source
  * (including web sites) or distributed to other students.
  *
- * Please update the following with your information:
  *
  *      Name:        Yick Shu Yuen
  *      Student ID:  153841218
